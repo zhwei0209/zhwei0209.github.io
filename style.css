@@ -16,8 +16,8 @@
   --butter: #F2E4A8;
   --butter-deep: #E6D57A;
   --pink: #EFD9CF;
-  --max: 1240px;
-  --pad: clamp(20px, 4vw, 64px);
+  --max: 960px;
+  --pad: clamp(24px, 6vw, 96px);
 }
 
 * { box-sizing: border-box; }
@@ -188,10 +188,9 @@ main { width: 100%; }
 }
 .contact-card {
   position: relative;
-  background: var(--dark);
-  color: #EDE7D9;
-  padding: clamp(40px, 6vw, 72px);
-  border-radius: 2px;
+  background: transparent;
+  color: var(--ink);
+  padding: 0;
   overflow: hidden;
 }
 .card-asterisk {
@@ -209,11 +208,11 @@ main { width: 100%; }
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0 0 12px;
-  color: #F4EEDE;
+  color: var(--ink);
 }
 .contact-sub {
   font-size: 16px;
-  color: #BDB5A6;
+  color: var(--ink-soft);
   margin: 0 0 48px;
   max-width: 520px;
 }
@@ -222,7 +221,7 @@ main { width: 100%; }
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   padding-top: 32px;
-  border-top: 1px solid #3A3631;
+  border-top: 1px solid var(--rule);
 }
 @media (max-width: 720px) {
   .contact-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -231,15 +230,15 @@ main { width: 100%; }
 .contact-k {
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: #807970;
+  color: var(--ink-mute);
 }
-.contact-v { font-size: 14px; color: #EDE7D9; line-height: 1.5; }
+.contact-v { font-size: 14px; color: var(--ink); line-height: 1.5; }
 .contact-grid a {
-  font-size: 14px; color: #EDE7D9;
-  border-bottom: 1px solid #3A3631;
+  font-size: 14px; color: var(--ink);
+  border-bottom: 1px solid var(--rule);
   width: fit-content;
 }
-.contact-grid a:hover { border-color: var(--butter); color: var(--butter); }
+.contact-grid a:hover { border-color: var(--ink); }
 .contact-links { display: flex; flex-wrap: wrap; gap: 14px; }
 .contact-links a { font-size: 13px; }
 
