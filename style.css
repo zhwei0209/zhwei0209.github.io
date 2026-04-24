@@ -186,8 +186,8 @@ main { width: 100%; }
 .contact-block {
   display: block;
 }
-#contact { padding-top: 64px; padding-bottom: 72px; }
-#contact .section-head { margin-bottom: 40px; }
+#contact { padding-top: 120px; padding-bottom: 140px; }
+#contact .section-head { margin-bottom: 72px; }
 .contact-card {
   position: relative;
   background: transparent;
@@ -214,18 +214,18 @@ main { width: 100%; }
   border-radius: 2px;
 }
 .contact-lede {
-  font-size: clamp(28px, 3vw, 40px);
-  line-height: 1.1;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
   letter-spacing: -0.02em;
   margin: 0;
   color: var(--ink);
 }
 .contact-sub {
-  font-size: 14px;
+  font-size: 17px;
   color: var(--ink-soft);
   margin: 0;
-  max-width: 360px;
-  line-height: 1.5;
+  max-width: 420px;
+  line-height: 1.55;
 }
 .contact-grid {
   display: grid;
@@ -243,18 +243,18 @@ main { width: 100%; }
 .contact-grid > div { display: flex; flex-direction: column; gap: 8px; }
 .contact-k {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--ink-mute);
 }
-.contact-v { font-size: 14px; color: var(--ink); line-height: 1.5; }
+.contact-v { font-size: 17px; color: var(--ink); line-height: 1.5; }
 .contact-grid a {
-  font-size: 14px; color: var(--ink);
+  font-size: 17px; color: var(--ink);
   border-bottom: 1px solid var(--rule);
   width: fit-content;
 }
 .contact-grid a:hover { border-color: var(--ink); }
-.contact-links { display: flex; flex-wrap: wrap; gap: 14px; }
-.contact-links a { font-size: 13px; }
+.contact-links { display: flex; flex-wrap: wrap; gap: 18px; }
+.contact-links a { font-size: 16px; }
 
 
 /* ---------- Meta list ---------- */
