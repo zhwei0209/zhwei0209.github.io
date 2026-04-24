@@ -229,7 +229,7 @@ main { width: 100%; }
 }
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   padding-left: clamp(24px, 4vw, 48px);
   border-left: 1px solid var(--rule);
