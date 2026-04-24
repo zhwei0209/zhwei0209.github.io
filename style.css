@@ -8,6 +8,14 @@
   --rule: #C9C2B2;
   --accent: #D9C36B;
   --accent-soft: #F2E9B8;
+  --cream: #F4F1EA;
+  --dark: #141311;
+  --dark-soft: #262420;
+  --sage: #D8DDC8;
+  --sage-deep: #B9C1A2;
+  --butter: #F2E4A8;
+  --butter-deep: #E6D57A;
+  --pink: #EFD9CF;
   --max: 1240px;
   --pad: clamp(20px, 4vw, 64px);
 }
@@ -66,13 +74,61 @@ em { font-style: italic; color: var(--ink-soft); }
 .nav a:hover::after { transform: scaleX(1); }
 
 /* ---------- Sections ---------- */
-main { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+main { width: 100%; }
 
 .section {
-  padding: 80px 0 100px;
+  padding: 96px var(--pad) 112px;
   border-bottom: 1px solid var(--rule);
 }
 .section:last-of-type { border-bottom: none; }
+.section > .section-head,
+.section > .section-body {
+  max-width: var(--max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tone variants — Williams-style full-width color blocks */
+.tone-cream { background: var(--cream); color: var(--ink); }
+.tone-sage { background: var(--sage); color: var(--ink); }
+.tone-butter { background: var(--butter); color: var(--ink); }
+
+.tone-dark {
+  background: var(--dark);
+  color: #EDE7D9;
+  border-bottom-color: #2A2824;
+}
+.tone-dark .section-head .label { color: #EDE7D9; }
+.tone-dark .section-head,
+.tone-dark .subhead { color: #9E9787; border-color: #3A3631; }
+.tone-dark .lede { color: #F4EEDE; }
+.tone-dark a { color: #EDE7D9; border-color: #4A453D; }
+.tone-dark a:hover { border-color: #EDE7D9; }
+.tone-dark .meta-row { border-color: #3A3631; color: #C9C2B2; }
+.tone-dark .meta-row span:first-child { color: #807970; }
+.tone-dark .meta-row span:last-child { color: #EDE7D9; }
+.tone-dark .pub { border-color: #3A3631; }
+.tone-dark .pub:last-child { border-color: #3A3631; }
+.tone-dark .pub-meta { color: #BDB5A6; }
+.tone-dark .pub-meta strong { color: #F4EEDE; }
+.tone-dark .pub-links a { color: #9E9787; }
+.tone-dark .pub-links a:hover { color: #EDE7D9; }
+.tone-dark .pub-status { background: var(--butter); color: var(--dark); }
+.tone-dark .talks li, .tone-dark .timeline li { border-color: #3A3631; }
+.tone-dark em, .tone-dark .note, .tone-dark .soft { color: #BDB5A6; }
+.tone-dark .tags li { background: #262420; border-color: #3A3631; color: #C9C2B2; }
+.tone-dark .yr { color: #9E9787; }
+
+.tone-sage .pub-status { background: #F4F1EA; }
+.tone-sage .meta-row, .tone-sage .pub, .tone-sage .talks li, .tone-sage .timeline li, .tone-sage .subhead {
+  border-color: #A9B293;
+}
+.tone-sage .btn { background: var(--dark); color: var(--sage); }
+
+.tone-butter .pub-status { background: #F4F1EA; }
+.tone-butter .meta-row, .tone-butter .subhead {
+  border-color: #D4C06A;
+}
 
 .section-head {
   display: flex; justify-content: space-between; align-items: baseline;
