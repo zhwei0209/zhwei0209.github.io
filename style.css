@@ -169,6 +169,80 @@ main { width: 100%; }
   transition: transform .6s ease;
 }
 .portrait:hover img { transform: scale(1.03); }
+.portrait { position: relative; }
+.portrait-mark {
+  position: absolute;
+  top: 14px; right: 14px;
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  background: var(--butter);
+  color: var(--dark);
+  font-size: 18px;
+  border-radius: 2px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.15);
+}
+
+/* ---------- Contact block ---------- */
+.contact-block {
+  display: block;
+}
+.contact-card {
+  position: relative;
+  background: var(--dark);
+  color: #EDE7D9;
+  padding: clamp(40px, 6vw, 72px);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.card-asterisk {
+  position: absolute;
+  top: 24px; right: 28px;
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  background: var(--butter);
+  color: var(--dark);
+  font-size: 22px;
+  border-radius: 2px;
+}
+.contact-lede {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+  color: #F4EEDE;
+}
+.contact-sub {
+  font-size: 16px;
+  color: #BDB5A6;
+  margin: 0 0 48px;
+  max-width: 520px;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #3A3631;
+}
+@media (max-width: 720px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+.contact-grid > div { display: flex; flex-direction: column; gap: 8px; }
+.contact-k {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #807970;
+}
+.contact-v { font-size: 14px; color: #EDE7D9; line-height: 1.5; }
+.contact-grid a {
+  font-size: 14px; color: #EDE7D9;
+  border-bottom: 1px solid #3A3631;
+  width: fit-content;
+}
+.contact-grid a:hover { border-color: var(--butter); color: var(--butter); }
+.contact-links { display: flex; flex-wrap: wrap; gap: 14px; }
+.contact-links a { font-size: 13px; }
+
 
 /* ---------- Meta list ---------- */
 .meta { display: flex; flex-direction: column; gap: 14px; }
