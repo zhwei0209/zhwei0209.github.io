@@ -95,6 +95,25 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
   .two-col { grid-template-columns: 1fr; gap: 32px; }
 }
 
+/* ---------- Portrait ---------- */
+.about-grid { grid-template-columns: 320px 1fr; }
+@media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; } }
+.portrait-col { display: flex; flex-direction: column; gap: 24px; }
+.portrait {
+  margin: 0;
+  overflow: hidden;
+  background: var(--bg-alt);
+  aspect-ratio: 3 / 4;
+}
+.portrait img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.95);
+  transition: transform .6s ease;
+}
+.portrait:hover img { transform: scale(1.03); }
+
 /* ---------- Meta list ---------- */
 .meta { display: flex; flex-direction: column; gap: 14px; }
 .meta-row {
