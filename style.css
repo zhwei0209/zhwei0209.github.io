@@ -352,6 +352,9 @@ main { width: 100%; }
   color: var(--ink-mute); padding-top: 2px;
 }
 
+/* ---------- CV center ---------- */
+#cv .intro { margin: 0 auto; }
+
 /* ---------- PDF embed ---------- */
 .pdf-frame {
   width: 100%;
