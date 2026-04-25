@@ -79,8 +79,15 @@ main { width: 100%; }
 .section {
   padding: 96px var(--pad) 112px;
   border-bottom: 1px solid var(--rule);
+  min-height: 100vh;
+  scroll-margin-top: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .section:last-of-type { border-bottom: none; }
+.section > .section-head { width: 100%; }
+.section > .section-body { width: 100%; }
 .section > .section-head,
 .section > .section-body {
   max-width: var(--max);
@@ -408,10 +415,27 @@ main { width: 100%; }
   color: var(--ink-mute);
 }
 
+/* ---------- Section reveal animation ---------- */
+.section-head, .section-body {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+.section.in-view .section-head,
+.section.in-view .section-body {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section.in-view .section-body { transition-delay: .15s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .section-head, .section-body { opacity: 1; transform: none; transition: none; }
+}
+
 /* ---------- Small screens ---------- */
 @media (max-width: 640px) {
   .site-header { flex-direction: column; align-items: flex-start; gap: 14px; }
   .nav { gap: 18px; flex-wrap: wrap; }
-  .section { padding: 60px 0 72px; }
+  .section { padding: 60px 0 72px; min-height: auto; }
   .talks li, .timeline li { grid-template-columns: 60px 1fr; gap: 12px; }
 }

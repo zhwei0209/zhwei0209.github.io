@@ -210,6 +210,22 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Reveal sections as they enter the viewport
+  const sections = document.querySelectorAll('.section');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(s => io.observe(s));
+  } else {
+    sections.forEach(s => s.classList.add('in-view'));
+  }
 </script>
 
 </body>
