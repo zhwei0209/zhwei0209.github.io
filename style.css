@@ -13,7 +13,7 @@
   --dark-soft: #262420;
   --sage: #D8DDC8;
   --sage-deep: #B9C1A2;
-  --butter: #E8E0B8;
+  --butter: #F1ECD4;
   --butter-deep: #D4C78A;
   --pink: #EFD9CF;
   --max: 960px;
@@ -132,9 +132,9 @@ main { width: 100%; }
 }
 .tone-sage .btn { background: var(--dark); color: var(--sage); }
 
-.tone-butter .pub-status { background: #F4F1EA; }
+.tone-butter .pub-status { background: #E8DEAB; }
 .tone-butter .meta-row, .tone-butter .subhead {
-  border-color: #D4C06A;
+  border-color: #D9C87E;
 }
 
 .section-head {
